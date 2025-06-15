@@ -13,6 +13,7 @@ TextTheme customTextTheme(Color textColor) {
       color: textColor.withOpacity(0.4),
       fontSize: 15,
       height: 1.5,
+      fontWeight: FontWeight.w500,
     ),
     // Add more styles as needed
   );

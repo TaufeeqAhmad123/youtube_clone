@@ -1,27 +1,49 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utils/theme/text_theme.dart';
+import 'package:provider/provider.dart';
+
+import '../../provider/theme_provider.dart';
 
 class AppTheme {
-  static final lightTheme = ThemeData(
+  static final lightTheme= ThemeData(
     brightness: Brightness.light,
-    primaryColor: Colors.red,
+    primaryColor: Colors.blue,
     scaffoldBackgroundColor: Colors.white,
-   colorScheme: ColorScheme.light(
-    primary: Colors.red,
-    onPrimary: Colors.white,
-    secondary: Colors.blue,
-    onSecondary: Colors.white,
-    surface: Colors.grey.shade300, // ✅ Container color
-    onSurface: Colors.black,
-    background: Colors.white,
-    onBackground: Colors.black,
-    error: Colors.red,
-    onError: Colors.white,
-  ),
-    appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.white,
+    colorScheme: ColorScheme.light(
+      primary: Colors.blue,
+      onPrimary: Colors.white,
+      secondary: Colors.white,
+      onSecondary: Colors.white,
+      surface: Colors.grey.shade300, // ✅ Container color
+      onSurface: Colors.black,
+      background: Colors.white,
+      onBackground: Colors.black,
+      error: Colors.red,
+      onError: Colors.white,
+    ),
+    iconTheme: const IconThemeData(
+      color: Colors.black,
+     
+    ),
+    dividerColor: Colors.grey.shade200,
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        disabledBackgroundColor: Colors.grey.shade300,
+        disabledForegroundColor: Colors.grey.shade600,
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.black,
+        
+        textStyle: const TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          color: Colors.red,
+        ),
+      ),
+    ),
+    appBarTheme: AppBarTheme(
+     backgroundColor: Colors.white,
       iconTheme: IconThemeData(color: Colors.black),
-      titleTextStyle: TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
+      titleTextStyle: const TextStyle(color: Colors.black, fontSize: 18, fontWeight: FontWeight.bold),
     ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: Colors.white,
@@ -33,10 +55,10 @@ class AppTheme {
 
   static final darkTheme = ThemeData(
     brightness: Brightness.dark,
-    primaryColor: Colors.red,
+    primaryColor: Colors.blue,
     scaffoldBackgroundColor: Colors.black,
     colorScheme: ColorScheme.dark(
-    primary: Colors.red,
+    primary: Colors.blue,
     onPrimary: Colors.black,
     secondary: Colors.teal,
     onSecondary: Colors.black,
@@ -47,6 +69,25 @@ class AppTheme {
     error: Colors.red.shade400,
     onError: Colors.black,
   ),
+   elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        disabledBackgroundColor: Colors.grey.shade300,
+        disabledForegroundColor: Colors.grey.shade600,
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.black,
+        
+        textStyle: const TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          color: Colors.red,
+        ),
+      ),
+    ),
+      iconTheme: const IconThemeData(
+      color: Colors.white,
+     
+    ),
+    dividerColor: Colors.white.withOpacity(0.2),
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.black,
       iconTheme: IconThemeData(color: Colors.white),
